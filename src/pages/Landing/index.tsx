@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import landingImg from '../../assets/images/landing.svg'
+import landing_original from '../../assets/images/landing_original.svg'
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg'
 
 import './styles.css';
@@ -15,7 +15,7 @@ const Landing: React.FC = () => {
           <h2>Olá! Seja Bem-Vindo a nossa Plataforma</h2>
         </div>
 
-        <img src={landingImg} alt="Plataforma Ben System" className="hero-image" />
+        <img src={landing_original} alt="Plataforma Ben System" className="hero-image" />
 
         <div className="buttons-container">
           <Link to="orcamento" className="study">
