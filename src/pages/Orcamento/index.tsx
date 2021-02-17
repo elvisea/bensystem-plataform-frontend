@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -17,24 +17,28 @@ const Orcamento: React.FC = () => {
   const [whatsapp, setWhatsapp] = useState('');
   const [description, setDescription] = useState('');
 
-  function handleCreateCalled(e: FormEvent) {
-    e.preventDefault();
+  const handleCreateOrcamento = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      try {
+        e.preventDefault();
 
-    api
-      .post('orcamento', {
-        name,
-        email,
-        whatsapp,
-        description,
-      })
-      .then(() => {
-        alert('Orçamento Criado Com Sucesso!');
-        history.push('/');
-      })
-      .catch(() => {
+        api
+          .post('orcamento', {
+            name,
+            email,
+            whatsapp,
+            description,
+          })
+          .then(() => {
+            alert('Orçamento Criado Com Sucesso!');
+            history.push('/');
+          });
+      } catch (error) {
         alert('Error');
-      });
-  }
+      }
+    },
+    [name, email, whatsapp, description, history],
+  );
 
   return (
     <div id="page-teacher-form" className="container">
@@ -43,7 +47,7 @@ const Orcamento: React.FC = () => {
         description="Preencha seus dados de contato e descrição do serviço que você deseja."
       />
       <main>
-        <form onSubmit={handleCreateCalled}>
+        <form onSubmit={handleCreateOrcamento}>
           <fieldset>
             <legend>Seus Dados</legend>
 
