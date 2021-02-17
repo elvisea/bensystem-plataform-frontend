@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import landingOriginal from '../../assets/images/landingOriginal.svg';
-import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
+import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
@@ -32,7 +32,7 @@ const Landing: React.FC = () => (
         </Link>
       </div>
       <span className="total-connections">
-        Seja Muito Bem Vindo! <img src={purpleHeartIcon} alt="Coração Roxo" />
+        41 99524-1164 <img src={whatsappIcon} alt="Coração Roxo" />
       </span>
     </div>
   </div>
