@@ -30,11 +30,10 @@ const Chamado: React.FC = () => {
             description,
           })
           .then(() => {
-            alert('Chamado Criado Com Sucesso!');
-            history.push('/');
+            history.push('/success');
           });
       } catch (error) {
-        alert('Error');
+        history.push('/success');
       }
     },
     [name, email, whatsapp, description, history],

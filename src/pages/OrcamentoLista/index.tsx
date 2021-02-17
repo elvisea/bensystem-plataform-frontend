@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FiTrash2 } from 'react-icons/fi';
 import './styles.css';
 
@@ -16,6 +17,7 @@ interface IOrcamentos {
 
 const OrcamentoList: React.FC = () => {
   const [orcamentos, setOrcamentos] = useState<IOrcamentos[]>([]);
+  const history = useHistory();
 
   useEffect(() => {
     api.get('/orcamentos').then(response => setOrcamentos(response.data));
@@ -27,10 +29,10 @@ const OrcamentoList: React.FC = () => {
         api.delete(`orcamento/${id}`);
         setOrcamentos(orcamentos.filter(orcamento => orcamento.id !== id));
       } catch (error) {
-        alert('Erro ao deletar Orcamento, tente novamente.');
+        history.push('/success');
       }
     },
-    [orcamentos],
+    [history, orcamentos],
   );
 
   return (

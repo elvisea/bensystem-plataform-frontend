@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 import { FiTrash2 } from 'react-icons/fi';
 import './styles.css';
 
@@ -16,6 +17,7 @@ interface IChamados {
 
 const ChamadosLista: React.FC = () => {
   const [chamados, setChamados] = useState<IChamados[]>([]);
+  const history = useHistory();
 
   useEffect(() => {
     api.get('/chamados').then(response => setChamados(response.data));
@@ -27,10 +29,10 @@ const ChamadosLista: React.FC = () => {
         api.delete(`chamado/${id}`);
         setChamados(chamados.filter(chamado => chamado.id !== id));
       } catch (error) {
-        alert('Erro ao deletar Chamado, tente novamente.');
+        history.push('/success');
       }
     },
-    [chamados],
+    [history, chamados],
   );
 
   return (
