@@ -116,6 +116,27 @@
   background: var(--color-secundary-dark);
 }
 
+.chamado-item header button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 1000px;
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  border: 1px solid #dcdce6;
+  background: transparent;
+  margin-left: 16px;
+  transition: border-color 0.2s;
+  right: 24px;
+  top: 24px;
+  border: 0;
+}
+
+.chamado-item button:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 700px) {
   .chamado-item header,
   .chamado-item footer {

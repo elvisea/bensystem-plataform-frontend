@@ -50,12 +50,14 @@ const ChamadosLista: React.FC = () => {
               <div>
                 <strong>{chamado.name}</strong>
                 <span>{chamado.email}</span>
-                <button
-                  onClick={() => handleDeleteChamado(chamado.id)}
-                  type="button"
-                >
-                  <FiTrash2 size={20} colorProfile="#FFFF" />
-                </button>
+                <div>
+                  <button
+                    onClick={() => handleDeleteChamado(chamado.id)}
+                    type="button"
+                  >
+                    <FiTrash2 size={20} colorProfile="#FFFF" />
+                  </button>
+                </div>
               </div>
             </header>
             <p>{chamado.description}</p>
