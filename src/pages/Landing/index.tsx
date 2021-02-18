@@ -17,7 +17,7 @@ const Landing: React.FC = () => (
 
       <div className="logo-container">
         <h2>
-          Instalações de cameras de segurança, alarmes, cerca elétrica,
+          Instalações de câmeras de segurança, alarmes, cerca elétrica,
           interfones e controles de acesso.
         </h2>
       </div>
