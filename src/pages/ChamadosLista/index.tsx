@@ -36,20 +36,18 @@ const ChamadosLista: React.FC = () => {
   );
 
   return (
-    <div className="container" id="page-teacher-list">
-      <PageHeader title="Esses são seus Chamados." />
+    <>
+      <div className="container" id="page-teacher-list">
+        <PageHeader title="Esses são seus Chamados." />
 
-      {chamados.map(chamado => (
-        <main key={chamado.id}>
-          <article className="chamado-item">
-            <header>
-              <img
-                src="https://avatars.githubusercontent.com/u/50111083?s=460&u=0effb75d4b27a3c349d5ad4ecca7f8e81fe4e263&v=4"
-                alt="Elvis"
-              />
-              <div>
-                <strong>{chamado.name}</strong>
-                <span>{chamado.email}</span>
+        {chamados.map(chamado => (
+          <main key={chamado.id}>
+            <article className="chamado-item">
+              <header>
+                <div>
+                  <strong>{chamado.name}</strong>
+                  <span>{chamado.email}</span>
+                </div>
                 <div>
                   <button
                     onClick={() => handleDeleteChamado(chamado.id)}
@@ -58,23 +56,23 @@ const ChamadosLista: React.FC = () => {
                     <FiTrash2 size={20} colorProfile="#FFFF" />
                   </button>
                 </div>
-              </div>
-            </header>
-            <p>{chamado.description}</p>
-            <footer>
-              <p>
-                Telefone
-                <strong>{chamado.whatsapp}</strong>
-              </p>
-              <button type="button">
-                <img src={whatsappIcon} alt="Whatsapp" />
-                Entrar em Contato
-              </button>
-            </footer>
-          </article>
-        </main>
-      ))}
-    </div>
+              </header>
+              <p>{chamado.description}</p>
+              <footer>
+                <p>
+                  Telefone
+                  <strong>{chamado.whatsapp}</strong>
+                </p>
+                <button type="button">
+                  <img src={whatsappIcon} alt="Whatsapp" />
+                  Entrar em Contato
+                </button>
+              </footer>
+            </article>
+          </main>
+        ))}
+      </div>
+    </>
   );
 };
 

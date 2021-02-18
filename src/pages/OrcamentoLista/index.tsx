@@ -44,10 +44,6 @@ const OrcamentoList: React.FC = () => {
           <main key={orcamento.id}>
             <article className="orcamento-item">
               <header>
-                <img
-                  src="https://avatars.githubusercontent.com/u/50111083?s=460&u=0effb75d4b27a3c349d5ad4ecca7f8e81fe4e263&v=4"
-                  alt="Elvis"
-                />
                 <div>
                   <strong>{orcamento.name}</strong>
                   <span>{orcamento.email}</span>
