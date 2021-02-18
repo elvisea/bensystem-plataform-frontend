@@ -16,7 +16,10 @@ const Landing: React.FC = () => (
       />
 
       <div className="logo-container">
-        <h2>Olá! Seja Bem-Vindo a nossa Plataforma</h2>
+        <h2>
+          Instalações de cameras de segurança, alarmes, cerca elétrica,
+          interfones e controles de acesso.
+        </h2>
       </div>
 
       <div className="buttons-container">
