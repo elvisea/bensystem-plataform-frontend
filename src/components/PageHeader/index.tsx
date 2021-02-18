@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import backIcon from '../../assets/images/icons/back.svg';
-// import logoImg from '../../assets/images/logo.svg'
+import logoBensystem from '../../assets/images/logobensystem.png';
 
 import './styles.css';
 
@@ -21,7 +21,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <Link to="/">
         <img src={backIcon} alt="Voltar" />
       </Link>
-      {/* <img src={logoImg} alt="Proffy" /> */}
+      <img src={logoBensystem} alt="Proffy" />
     </div>
     <div className="header-content">
       <strong>{title}</strong>

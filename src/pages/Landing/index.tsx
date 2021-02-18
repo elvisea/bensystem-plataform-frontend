@@ -29,7 +29,7 @@ const Landing: React.FC = () => (
         </Link>
       </div>
       <span className="total-connections">
-        41 99524-1164 <img src={whatsappIcon} alt="Whatsapp" />
+        41 99675-3699 <img src={whatsappIcon} alt="Whatsapp" />
       </span>
     </div>
   </div>
