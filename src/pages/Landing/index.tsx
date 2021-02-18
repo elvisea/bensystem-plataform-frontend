@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import landingOriginal from '../../assets/images/landingOriginal.svg';
+import logoBensystem from '../../assets/images/logobensystem.png';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
@@ -9,18 +9,15 @@ import './styles.css';
 const Landing: React.FC = () => (
   <div id="page-landing">
     <div id="page-landing-content" className="container">
-      <div className="logo-container">
-        <h1 style={{ fontSize: 60, color: 'white', fontWeight: 'bolder' }}>
-          BenSystem
-        </h1>
-        <h2>Olá! Seja Bem-Vindo a nossa Plataforma</h2>
-      </div>
-
       <img
-        src={landingOriginal}
+        src={logoBensystem}
         alt="Plataforma Ben System"
         className="hero-image"
       />
+
+      <div className="logo-container">
+        <h2>Olá! Seja Bem-Vindo a nossa Plataforma</h2>
+      </div>
 
       <div className="buttons-container">
         <Link to="orcamento" className="study">
